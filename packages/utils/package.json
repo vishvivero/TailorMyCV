@@ -1,34 +1,31 @@
 {
-  "name": "@renovamen/utils",
-  "version": "0.1.1",
-  "description": "Useful utils, zero dependencies.",
-  "homepage": "https://github.com/Renovamen/oh-my-cv/tree/main/packages/utils",
+  "name": "@tailormycv/utils",
+  "version": "0.1.0",
+  "description": "Utility functions for TailorMyCV",
+  "homepage": "https://github.com/vishvivero/TailorMyCV/tree/main/packages/utils",
   "bugs": {
-    "url": "https://github.com/Renovamen/oh-my-cv"
+    "url": "https://github.com/vishvivero/TailorMyCV"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Renovamen/oh-my-cv.git",
-    "directory": "packages/utils"
+    "url": "git+https://github.com/vishvivero/TailorMyCV.git"
   },
-  "license": "MIT",
-  "author": "Renovamen <renovamenzxh@gmail.com>",
+  "license": "GPL-3.0",
+  "author": "vishvivero <102862874+vishvivero@users.noreply.github.com>",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "exports": {
-    "types": "./dist/index.d.ts",
-    "require": "./dist/index.js",
-    "import": "./dist/index.mjs"
-  },
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "scripts": {
-    "build-fast:pkg": "tsup src/index.ts --format cjs,esm",
-    "build:pkg": "pnpm run build-fast:pkg --dts"
-  },
-  "publishConfig": {
-    "access": "public"
+    "build": "tsup",
+    "dev": "tsup --watch"
   }
 }

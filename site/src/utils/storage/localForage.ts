@@ -1,5 +1,5 @@
 import * as localForage from "localforage";
-import { isClient, copy, now } from "@renovamen/utils";
+import { isClient, copy, now } from "@tailormycv/utils";
 import type {
   DbService,
   StorageJsonData,

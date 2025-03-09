@@ -10,8 +10,9 @@ head:
   keywords: resume maker, cv maker, curriculum vitae maker, markdown resume
 
 landing:
-  hero: Write your <span text-primary>resumes</span> in Markdown!
-  desc: is a free, open-source tool that helps you easily create and manage your resumes, while keeping your data private.
+  title: Create beautiful resumes with Markdown
+  description: Write your resume in Markdown and get a beautiful PDF
+  items: Create and manage multiple resumes<br>Real-time preview<br>Export to PDF<br>Highly customizable<br>Easy to switch fonts and add icons<br>And <a href="https://github.com/vishvivero/TailorMyCV#features" target="_blank">more features</a>
   start: Create My Resume
   feats:
     - title: Simple and Powerful

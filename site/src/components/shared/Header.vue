@@ -55,7 +55,7 @@
         as="a"
         variant="ghost-secondary"
         size="round"
-        href="http://github.com/Renovamen/oh-my-cv"
+        href="http://github.com/vishvivero/TailorMyCV"
         target="_blank"
         rel="nofollow noopener"
       >

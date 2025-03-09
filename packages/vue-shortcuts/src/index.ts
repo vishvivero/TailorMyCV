@@ -1,6 +1,6 @@
 import { watch } from "vue";
 import { useMagicKeys } from "@vueuse/core";
-import { isMac } from "@renovamen/utils";
+import { isMac } from "@tailormycv/utils";
 
 /**
  * Handle keyboard shortcuts, dealing ctrl/meta key for Windows/Mac automatically.

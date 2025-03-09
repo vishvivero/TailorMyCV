@@ -1,38 +1,21 @@
 {
-  "name": "oh-my-cv",
-  "version": "0.1.1",
+  "name": "tailormycv",
   "private": true,
-  "packageManager": "pnpm@9.4.0",
-  "type": "module",
   "scripts": {
-    "build": "pnpm --filter=site build",
-    "build:pkg": "pnpm -r --stream build:pkg",
-    "build-fast:pkg": "pnpm -r --stream build-fast:pkg",
-    "dev": "pnpm --filter=site dev",
-    "lint": "eslint .",
-    "release": "pnpm build:pkg && pnpm build",
-    "release:pkg": "pnpm release:pkg:check && pnpm release:pkg:version && pnpm -r publish",
-    "release:pkg:check": "pnpm lint && pnpm build:pkg",
-    "release:pkg:version": "bumpp package.json packages/*/package.json --commit \"build: publish v%s\" --all --tag --push",
-    "serve": "pnpm --filter=site serve"
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=site... && changeset publish"
   },
-  "prettier": "@renovamen/prettier-config",
+  "prettier": "./packages/prettier-config/index.json",
   "devDependencies": {
-    "@renovamen/eslint-config": "^0.1.7",
-    "@renovamen/prettier-config": "^0.1.7",
-    "bumpp": "^9.4.1",
-    "eslint": "^9.6.0",
-    "pnpm": "^9.4.0",
-    "prettier": "^3.3.2",
-    "taze": "^0.14.2",
-    "tsup": "^8.1.0",
-    "typescript": "^5.5.3"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "allowedVersions": {
-        "eslint": "9"
-      }
-    }
+    "@changesets/cli": "^2.27.1",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.4",
+    "turbo": "^1.11.3"
   }
 }

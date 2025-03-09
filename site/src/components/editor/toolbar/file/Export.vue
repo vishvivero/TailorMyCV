@@ -38,7 +38,7 @@
 </template>
 
 <script lang="ts" setup>
-import { downloadFile } from "@renovamen/utils";
+import { downloadFile } from "@tailormycv/utils";
 
 const { data } = useDataStore();
 const saveName = computed(() => data.resumeName.trim().replace(/\s+/g, "_"));
