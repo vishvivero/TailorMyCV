@@ -9,13 +9,15 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo run build --filter=site... && changeset publish"
+    "release": "turbo run build --filter=site... && changeset publish",
+    "build:packages": "pnpm --filter=\"./packages/**\" build"
   },
   "prettier": "./packages/prettier-config/index.json",
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "eslint": "^8.56.0",
     "prettier": "^3.2.4",
+    "tsup": "^8.4.0",
     "turbo": "^1.11.3"
   }
 }

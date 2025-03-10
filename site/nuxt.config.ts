@@ -32,7 +32,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      googleFontsKey: ""
+      googleFontsKey: process.env.NUXT_PUBLIC_GOOGLE_FONTS_KEY || ""
     }
   },
 
@@ -62,5 +62,6 @@ export default defineNuxtConfig({
     url: "https://ohmycv.app"
   },
 
-  pwa
+  pwa,
+  compatibilityDate: "2025-03-10"
 });

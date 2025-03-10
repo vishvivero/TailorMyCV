@@ -22,16 +22,19 @@
     "dist"
   ],
   "exports": {
-    "types": "./dist/index.d.ts",
-    "require": "./dist/index.js",
-    "import": "./dist/index.mjs"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build-fast:pkg": "tsup src/index.ts --format cjs,esm",
-    "build:pkg": "pnpm run build-fast:pkg --dts"
+    "build:pkg": "pnpm run build-fast:pkg --dts",
+    "build": "pnpm run build:pkg"
   },
   "devDependencies": {
     "@types/markdown-it": "^14.1.1",
