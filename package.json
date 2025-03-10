@@ -1,6 +1,7 @@
 {
   "name": "tailormycv",
   "private": true,
+  "packageManager": "pnpm@10.5.2",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",

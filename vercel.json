@@ -1,7 +1,7 @@
 {
   "version": 2,
   "framework": "nuxt",
-  "buildCommand": "pnpm --filter '@tailormycv/utils' build && pnpm --filter '@ohmycv/*' build && pnpm --filter 'site' build",
+  "buildCommand": "pnpm build:packages && pnpm --filter=\"site\" build",
   "outputDirectory": "site/.output/public",
   "installCommand": "pnpm install"
 } 
